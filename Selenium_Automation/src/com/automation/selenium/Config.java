@@ -3,6 +3,7 @@ package com.automation.selenium;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 public class Config {
@@ -12,7 +13,7 @@ public class Config {
 	public static String CHROMETASKKILL;
 	public static String CHROMEOPTIONS;
 	public static String APPURL;
-	public static int WAIT;
+	public static Duration WAIT;
 	
 	static {
 		FileInputStream fileInputStream;
@@ -26,7 +27,7 @@ public class Config {
 			CHROMETASKKILL = propertyFile.getProperty("chromeTaskKill");
 			CHROMEOPTIONS = propertyFile.getProperty("chromeOptions");
 			APPURL = propertyFile.getProperty("applicationURL");
-			WAIT = Integer.parseInt((propertyFile.getProperty("appLoadWaitTime")));
+			WAIT = Duration.parse((propertyFile.getProperty("appLoadWaitTime")));
 			
 			
 		} catch (FileNotFoundException e) {

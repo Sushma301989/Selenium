@@ -23,7 +23,7 @@ public class EntryClass {
 			driver = new ChromeDriver(options);
 			driver.get(Config.APPURL);
 			wait = new WebDriverWait(driver, Config.WAIT);
-						
+			
 			//Initialize the Workbooks and Sheets
 			Initialization.initialize();
 			
