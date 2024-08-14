@@ -15,7 +15,7 @@ public class EntryClass {
 	public static void main(String[] args) {
 		
 		try {
-			
+			//add commrng
 			Runtime.getRuntime().exec(Config.CHROMETASKKILL);
 			System.setProperty(Config.CHROMEPROPERTYNAME, Config.CHROMEDRIVERPATH);
 			ChromeOptions options = new ChromeOptions();
